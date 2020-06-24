@@ -1,36 +1,19 @@
+/**
+   ==================================================================
+
+   Сперва — normalize. 
+   Чтобы перейти к стилям проекта, используйте Ctrl+F «Стили проекта»
+
+   ==================================================================
+ */
+
 @import "normalize";
 
-@font-face {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('../fonts/Montserrat-Regular.woff') format(woff);
-}
+/**
+ * «Стили проекта»
+ */
 
-@font-face {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('../fonts/Montserrat-Medium.woff') format(woff);
-}
-
-@font-face {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('../fonts/Montserrat-SemiBold.woff') format(woff);
-}
-
-@font-face {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('../fonts/Montserrat-Bold.woff') format(woff);
-}
+@import "fonts";
 
 * {
   font-family: Montserrat, serif;
@@ -55,10 +38,6 @@ body {
   margin: auto;
 }
 
-.display-flex {
-  display: flex;
-}
-
 .logo-link {
   font-size: 0;
 }
@@ -67,6 +46,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-top: 35px;
+  display: flex;
 }
 
 .menu-list {
@@ -80,8 +60,8 @@ body {
 }
 
 .menu-list__link {
-  color: #fff;
   text-decoration: none;
+  color: #F9FBFD;
   padding-bottom: 5px;
   font-size: 16px;
   &:hover { border-bottom: 1px dashed #fff; }
