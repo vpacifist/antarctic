@@ -1,3 +1,8 @@
+<!-- todo
+— решить вопрос бекграунда при зуме страницы: псевдоэлемент или доп блок, ломающий разметку?
+— проверка пиксель перфект
+— тестирование и доступность
+— разное -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -24,7 +29,41 @@
       </div>
     </div>
   </header>
-  <main></main>
-<footer></footer>
+  <main>
+    <div class="container">
+      <section class="heading">
+        <h1>Круизы в Антарктику</h1>
+        <p>Волшебный мир айсбергов и пингвинов</p>
+      </section>
+      <section class="description">
+        <div class="description__text">
+          <h2>Путешествие на край Земли</h2>
+          <p>Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
+        </div>
+        <img src="img/content_description.jpg" srcset="img/content_description_2x.jpg 2x" alt="Пингвины на снегу" width="560" height="301">
+      </section>
+    </div>
+  </main>
+<footer class="footer">
+  <div class="container">
+    <div class="menu menu_footer">
+      <a class="logo-link">
+        <!-- 1х: 70px; 2x: 140px -->
+        <img src="img/logo.svg" srcset="img/logo.svg 2x" alt="Круизы в Антарктику" width="70" height="38">
+      </a>
+      <ul class="menu-list menu-list_footer">
+        <li class="menu-list__item"><a href="#" class="menu-list__link">Преимущества</a></li>
+        <li class="menu-list__item"><a href="#" class="menu-list__link">Направления</a></li>
+        <li class="menu-list__item"><a href="#" class="menu-list__link">Ближайшие круизы</a></li>
+        <li class="menu-list__item"><a href="#" class="menu-list__link">Контакты</a></li>
+      </ul>
+      <ul class="menu-list menu-list_social">
+        <li class="menu-list__item menu-list__item_social"><a href="#" class="menu-list__link menu-list__link_social"><img src="img/icon_facebook.svg" srcset="img/icon_facebook.svg 2x" alt="Мы в Фейсбуке" width="11" height="20"></a></li>
+        <li class="menu-list__item menu-list__item_social"><a href="#" class="menu-list__link menu-list__link_social"><img src="img/icon_instagram.svg" srcset="img/icon_instagram.svg 2x" alt="Мы в Инстаграме" width="20" height="20"></a></li>
+        <li class="menu-list__item menu-list__item_social"><a href="#" class="menu-list__link menu-list__link_social"><img src="img/icon_twitter.svg" srcset="img/icon_twitter.svg 2x" alt="Мы в Твиттере" width="20" height="16"></a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

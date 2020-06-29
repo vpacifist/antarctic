@@ -353,22 +353,21 @@ template {
 body {
   min-width: 1366px; }
 
+.container {
+  width: 1160px;
+  margin: auto; }
+
 .header::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 650px;
-  background: url(../img/bg-header.jpg) center;
+  background: url(../img/header_bg.jpg) center;
   background-size: 100%;
   background-color: #1b4a81;
-  z-index: -1; }
-
-.container {
-  width: 1160px;
-  margin: auto; }
-
-.logo-link {
-  font-size: 0; }
+  z-index: -1;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); }
 
 .menu {
   -webkit-box-pack: justify;
@@ -377,16 +376,20 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 35px;
+  padding: 35px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+
+.logo-link {
+  font-size: 0; }
 
 .menu-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0; }
+  margin: 0;
+  max-width: 1000px; }
 
 .menu-list__item {
   list-style: none;
@@ -396,8 +399,59 @@ body {
   text-decoration: none;
   color: #F9FBFD;
   padding-bottom: 5px;
-  font-size: 16px; }
+  font-size: 16px;
+  font-weight: 500; }
   .menu-list__link:hover {
-    border-bottom: 1px dashed #fff; }
+    border-bottom: 1px dashed #f9fbfd; }
   .menu-list__link:focus {
-    border-bottom: 2px solid #fff; }
+    border-bottom: 2px solid #f9fbfd; }
+
+.heading {
+  padding: 129px 95px 258px; }
+
+.heading h1 {
+  color: #fff;
+  font-size: 54px;
+  font-weight: 700;
+  margin-bottom: -7px; }
+
+.heading p {
+  color: #fff;
+  font-size: 20px; }
+
+.description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 120px 0; }
+
+.description__text {
+  padding: 38px 65px 0 0; }
+
+.description__text h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px; }
+
+.description__text p {
+  line-height: 150%; }
+
+.footer {
+  background: #011c40; }
+
+.menu_footer {
+  padding: 50px 0; }
+
+.menu-list_footer {
+  margin-left: -300px; }
+
+.menu-list_social {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.menu-list__link_social:hover {
+  border-bottom: none; }
+
+.menu-list__link_social:active {
+  border-bottom: none; }
