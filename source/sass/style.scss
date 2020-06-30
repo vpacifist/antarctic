@@ -15,7 +15,7 @@
 
 @import "fonts";
 
-* {
+body {
   font-family: Montserrat, Arial, serif;
 }
 
@@ -55,6 +55,7 @@ body {
   display: flex;
   margin: 0;
   max-width: 1000px;
+  padding-top: 7px;
 }
 
 .menu-list__item {
@@ -63,12 +64,14 @@ body {
 }
 
 .menu-list__link {
+  display: flex;
   text-decoration: none;
   color: #F9FBFD;
   padding-bottom: 5px;
   font-size: 16px;
   font-weight: 500;
-  &:hover { border-bottom: 1px dashed #f9fbfd; }
+  border-bottom: 2px solid rgba(0,0,0,0);
+  &:hover { border-bottom: 2px dashed #f9fbfd; }
   &:focus { border-bottom: 2px solid #f9fbfd; }
 }
 
@@ -133,6 +136,7 @@ body {
 }
 
 .menu-list__link_social {
+  padding-bottom: 0;
   &:hover { border-bottom: none; }
   &:active { border-bottom: none; }
 }

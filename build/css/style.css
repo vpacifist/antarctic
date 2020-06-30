@@ -347,7 +347,7 @@ template {
   font-display: swap;
   src: url("../fonts/Montserrat-Bold.woff2") format(woff2), url("../fonts/Montserrat-Bold.woff") format(woff); }
 
-* {
+body {
   font-family: Montserrat, Arial, serif; }
 
 body {
@@ -389,20 +389,25 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin: 0;
-  max-width: 1000px; }
+  max-width: 1000px;
+  padding-top: 7px; }
 
 .menu-list__item {
   list-style: none;
   margin-left: 33px; }
 
 .menu-list__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-decoration: none;
   color: #F9FBFD;
   padding-bottom: 5px;
   font-size: 16px;
-  font-weight: 500; }
+  font-weight: 500;
+  border-bottom: 2px solid rgba(0, 0, 0, 0); }
   .menu-list__link:hover {
-    border-bottom: 1px dashed #f9fbfd; }
+    border-bottom: 2px dashed #f9fbfd; }
   .menu-list__link:focus {
     border-bottom: 2px solid #f9fbfd; }
 
@@ -450,8 +455,9 @@ body {
       -ms-flex-align: center;
           align-items: center; }
 
-.menu-list__link_social:hover {
-  border-bottom: none; }
-
-.menu-list__link_social:active {
-  border-bottom: none; }
+.menu-list__link_social {
+  padding-bottom: 0; }
+  .menu-list__link_social:hover {
+    border-bottom: none; }
+  .menu-list__link_social:active {
+    border-bottom: none; }
