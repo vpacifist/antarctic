@@ -1,8 +1,8 @@
 <!-- todo
-— решить вопрос бекграунда при зуме страницы: псевдоэлемент или доп блок, ломающий разметку?
 — проверка пиксель перфект
 — тестирование и доступность
-— разное -->
+— разное 
+— ретинизация бекграунда-->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -13,36 +13,239 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="menu">
-        <a class="logo-link">
-          <!-- 1х: 70px; 2x: 140px -->
-          <img src="img/logo.svg" srcset="img/logo.svg 2x" alt="Круизы в Антарктику" width="70" height="38">
-        </a>
-        <ul class="menu-list">
-          <li class="menu-list__item"><a href="#" class="menu-list__link">Преимущества</a></li>
-          <li class="menu-list__item"><a href="#" class="menu-list__link">Направления</a></li>
-          <li class="menu-list__item"><a href="#" class="menu-list__link">Ближайшие круизы</a></li>
-          <li class="menu-list__item"><a href="#" class="menu-list__link">Контакты</a></li>
-        </ul>
+
+  <!-- Header and heading -->
+  <div class="header-and-heading-background">
+    <header class="header">
+      <div class="container">
+        <div class="menu">
+          <a class="logo-link">
+            <!-- 1х: 70px; 2x: 140px -->
+            <img src="img/logo.svg" srcset="img/logo.svg 2x" alt="Круизы в Антарктику" width="70" height="38">
+          </a>
+          <ul class="menu-list">
+            <li class="menu-list__item"><a href="#" class="menu-list__link">Преимущества</a></li>
+            <li class="menu-list__item"><a href="#" class="menu-list__link">Направления</a></li>
+            <li class="menu-list__item"><a href="#" class="menu-list__link">Ближайшие круизы</a></li>
+            <li class="menu-list__item"><a href="#" class="menu-list__link">Контакты</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </header>
-  <main>
-    <div class="container">
-      <section class="heading">
+    </header>
+    <section class="heading">
+      <div class="container">
         <h1>Круизы в Антарктику</h1>
         <p>Волшебный мир айсбергов и пингвинов</p>
-      </section>
-      <section class="description">
-        <div class="description__text">
-          <h2>Путешествие на край Земли</h2>
-          <p>Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Main -->
+  <main>
+
+    <!-- Description -->
+    <section class="description">
+      <div class="container">
+        <div class="flex-wrapper align-items-center">
+          <article class="description__text">
+            <h2>Путешествие на край Земли</h2>
+            <p>Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
+          </article>
+          <img src="img/content_description.jpg" srcset="img/content_description_2x.jpg 2x" alt="Пингвины на снегу" width="560" height="301">
         </div>
-        <img src="img/content_description.jpg" srcset="img/content_description_2x.jpg 2x" alt="Пингвины на снегу" width="560" height="301">
-      </section>
-    </div>
+      </div>
+    </section>
+
+    <!-- Feature -->
+    <section class="feature">
+      <div class="container">
+        <h2>Преимущества</h2>
+        <div class="flex-wrapper">
+          <div class="feature__item feature__item_ship">
+            <h3>Небольшой круизный лайнер</h3>
+            <p>Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и очередей и даст возможность насладиться видами и природой.</p>
+          </div>
+          <div class="feature__item feature__item_check">
+            <h3>Система все включено</h3>
+            <p>Все наши круизы работают <br> по&nbsp;системе “Все Включено”. Великолепные блюда и безлимитный бар доступны для вас 24 часа.</p>
+          </div>
+          <div class="feature__item feature__item_boat">
+            <h3>Экскурсионные туры на Zodiac</h3>
+            <p>Экскурсионные туры к берегам Антарктиды совершаются на&nbsp;оборудованных лодках типа Zodiac в сопровождении опытных экскурсоводов.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cruise -->
+    <section class="cruise">
+      <div class="container">
+        <h2>Ближайшие круизы</h2>
+        <div class="cruise-wrapper">
+          <div class="flex-wrapper">
+            <div class="cruise__item-static cruise__item-static_astoria">
+              <div class="cruise__item-hover">
+                <h3>Круиз "Астория"</h3>
+                <h4>Маршрут</h4>
+                <p>Аргентина - Фолклендские острова - Антарктида</p>
+                <h4>Порт отправления</h4>
+                <p>Ушуайя</p>
+                <h4>Продолжительность</h4>
+                <p>11 дней</p>
+                <h4>Цена</h4>
+                <p>от 11500 $</p>
+                <button name="order" type="button">Забронировать</button>
+              </div>
+              <p>Круиз "Астория"</p>
+            </div>
+                     <div class="cruise__item-static cruise__item-static_elain">
+              <div class="cruise__item-hover">
+                <h3>Круиз "Элайн"</h3>
+                <h4>Маршрут</h4>
+                <p>Аргентина - Фолклендские острова - Антарктида - Чили</p>
+                <h4>Порт отправления</h4>
+                <p>Буэнос-Айрес</p>
+                <h4>Продолжительность</h4>
+                <p>20 дней</p>
+                <h4>Цена</h4>
+                <p>от 14500 $</p>
+                <button name="order" type="button">Забронировать</button>
+              </div>
+              <p>Круиз "Элайн"</p>
+            </div>
+            <div class="cruise__item-static cruise__item-static_atlantis">
+              <div class="cruise__item-hover">
+                <h3>Круиз "Атлантис"</h3>
+                <h4>Маршрут</h4>
+                <p>Аргентина - Южная Георгия и Южные Сандвичевы Острова - Антарктида</p>
+                <h4>Порт отправления</h4>
+                <p>Ушуайя</p>
+                <h4>Продолжительность</h4>
+                <p>15 дней</p>
+                <h4>Цена</h4>
+                <p>от 14500 $</p>
+                <button name="order" type="button">Забронировать</button>
+              </div>
+              <p>Круиз "Атлантис"</p>
+            </div>
+            <div class="cruise__item-static cruise__item-static_odissey">
+              <div class="cruise__item-hover">
+                <h3>Круиз "Одиссей"</h3>
+                <h4>Маршрут</h4>
+                <p>Чили - Антарктида</p>
+                <h4>Порт отправления</h4>
+                <p>Пунта-Аренас</p>
+                <h4>Продолжительность</h4>
+                <p>13 дней</p>
+                <h4>Цена</h4>
+                <p>от 9700 $</p>
+                <button name="order" type="button">Забронировать</button>
+              </div>
+              <p>Круиз "Одиссей"</p>
+            </div>
+            <div class="cruise__item-static cruise__item-static_olympia">
+              <div class="cruise__item-hover">
+                <h3>Круиз "Олимпия"</h3>
+                <h4>Маршрут</h4>
+                <p>Аргентина - Фолклендские острова - Южная Георгия - Антарктида</p>
+                <h4>Порт отправления</h4>
+                <p>Ушуайя</p>
+                <h4>Продолжительность</h4>
+                <p>21 день</p>
+                <h4>Цена</h4>
+                <p>от 18600 $</p>
+                <button name="order" type="button">Забронировать</button>
+              </div>
+              <p>Круиз "Олимпия"</p>
+            </div>
+            <div class="cruise__item-static cruise__item-static_aurora">
+              <div class="cruise__item-hover">
+                <h3>Круиз "Аврора"</h3>
+                <h4>Маршрут</h4>
+                <p>Аргентина - Антарктида - Чили</p>
+                <h4>Порт отправления</h4>
+                <p>Ушуайя</p>
+                <h4>Продолжительность</h4>
+                <p>14 дней</p>
+                <h4>Цена</h4>
+                <p>от 11700 $</p>
+                <button name="order" type="button">Забронировать</button>
+              </div>
+              <p>Круиз "Аврора"</p>
+            </div>
+            <div class="cruise__item-static cruise__item-static_leonor">
+              <div class="cruise__item-hover">
+                <h3>Круиз "Леонор"</h3>
+                <h4>Маршрут</h4>
+                <p>Чили - Южная Георгия - Антарктида - Аргентина</p>
+                <h4>Порт отправления</h4>
+                <p>Пунта-Аренас</p>
+                <h4>Продолжительность</h4>
+                <p>17 дней</p>
+                <h4>Цена</h4>
+                <p>от 12500 $</p>
+                <button name="order" type="button">Забронировать</button>
+              </div>
+              <p>Круиз "Леонор"</p>
+            </div>
+            <div class="cruise__item-static cruise__item-static_minion-1">
+              <div class="cruise__item-hover">
+                <h3>Круиз "Минион - 1"</h3>
+                <h4>Маршрут</h4>
+                <p>Аргентина - Антарктида</p>
+                <h4>Порт отправления</h4>
+                <p>Ушуайя</p>
+                <h4>Продолжительность</h4>
+                <p>11 дней</p>
+                <h4>Цена</h4>
+                <p>от 12300$</p>
+                <button name="order" type="button">Забронировать</button>
+              </div>
+              <p>Круиз "Минион - 1"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Order-form -->
+    <section class="order-form">
+      <div class="container">
+        <div class="order-form-wrapper">
+          <div class="flex-wrapper align-items-center">
+            <div class="order-form__text">
+              <h2>Раннее бронирование</h2>
+              <p>Забронируйте тур за 3-6 месяцев до&nbsp;даты выезда и сэкономьте до 50%</p>
+            </div>
+            <form action="" class="order-form__form">
+              <fieldset>
+                <legend>Оставьте заявку и мы свяжемся с вами в ближайшее время</legend>
+                <input type="text" name="name" placeholder="Валерия" class="order-form__input-full">
+                <input type="tel" name="tel" placeholder="89236889975" class="order-form__input-full">
+                <input type="email" name="email" placeholder="grishaewa.lera@gmail.com" class="order-form__input-full">
+                <label class="order-form__label-check"><input type="checkbox" checked="" name="agree" class="order-form__input-check"><span></span>Я согласен на обработку моих персональных данных</label>
+                <button type="button">Оставить заявку</button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacts -->
+    <section class="contacts">
+      <div class="container">
+        <div class="flex-wrapper align-items-center">
+          <div id="map" class="contacts__map"></div>
+          <div class="contacts__text">
+            <p class="contacts__call-to-action">У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.</p>
+            <p class="contacts__address">г. Санкт Петербург, ул. Большая Конюшенная, 19/8</p>
+            <p class="contacts__tel">8-800-200-00-00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 <footer class="footer">
   <div class="container">
@@ -65,5 +268,10 @@
     </div>
   </div>
 </footer>
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=d93d657f-3362-4927-a837-1a77feb7f7e2
+" type="text/javascript"></script>
+<script src="js/map.js" type="text/javascript"></script>
+
 </body>
 </html>
