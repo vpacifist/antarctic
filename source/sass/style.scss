@@ -1,17 +1,4 @@
-/**
-   ==================================================================
-
-   Сперва — normalize. 
-   Чтобы перейти к стилям проекта, используйте Ctrl+F «Стили проекта»
-
-   ==================================================================
- */
-
 @import "normalize";
-
-/**
- * «Стили проекта»
- */
 
 @import "fonts";
 
@@ -47,6 +34,9 @@ h3 {
   align-items: center;
 }
 
+button:hover {
+  cursor: pointer;
+}
 
 //header and headig
 
@@ -54,6 +44,11 @@ h3 {
   background-color: #1b4a81;
   background: url(../img/header_bg.jpg) center;
   background-size: 100%;
+  @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
+    background-color: #1b4a81;
+    background: url(../img/header_bg_2x.jpg) center;
+    background-size: 100%;
+  }
 }
 
 .menu {
@@ -71,12 +66,12 @@ h3 {
   display: flex;
   margin: 0;
   max-width: 1000px;
-  padding-top: 7px;
+  padding-top: 9px;
 }
 
 .menu-list__item {
   list-style: none;
-  margin-left: 33px;
+  margin-left: 34px;
 }
 
 .menu-list__link {
@@ -120,16 +115,17 @@ h3 {
 }
 
 .description__text {
+  padding: 62px 0 0;
   width: 512px;
 }
 
 .description__text h2 {
-  margin-bottom: 30px;
+  margin: 0 0 29px;
 }
 
 .description__text p {
-  line-height: 150%;
   font-size: 16px;
+  line-height: 150%;
 }
 
 
@@ -138,7 +134,12 @@ h3 {
 .feature {
   background: url(../img/feature_bg.jpg) center;
   background-size: 100%;
-  background-color: #1b4a81;
+  background-color: rgb(211, 228, 240);
+  @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
+    background: url(../img/feature_bg_2x.jpg) center;
+    background-size: 100%;
+    background-color: rgb(211, 228, 240);
+  }
   padding: 93px 0 117px;
 }
 
@@ -150,17 +151,17 @@ h3 {
 .feature__item {
   background: #F9FBFD;
   width: 300px;
-  padding: 30px;
+  padding: 30px 30px 25px;
 }
 
 .feature h3 {
-  margin: 53px 0 9px;
+  margin: 52px 0 8px;
   line-height: 150%;
 }
 
 .feature p {
   font-size: 14px;
-  line-height: 140%;
+  line-height: 20px;
   margin: 0;
 }
 
@@ -210,7 +211,7 @@ h3 {
 //cruise
 
 .cruise {
-  padding: 115px 0 90px;
+  padding: 117px 0 90px;
 }
 
 .cruise h2 {
@@ -236,9 +237,10 @@ h3 {
   }
   &>p {
     position: absolute;
-    bottom: 23px;
+    bottom: 22px;
     font-size: 18px;
     line-height: 150%;
+    font-weight: 500;
   }
   &:hover .cruise__item-hover {
     visibility: visible;
@@ -253,12 +255,12 @@ h3 {
 
 .cruise__item-hover {
   visibility: hidden;
+  position: relative;
   width: 210px;
-  height: 330px;
-  overflow: auto;
+  height: 326px;
   background: #011C40;
   color: #F9FBFD;
-  padding: 28px 25px;
+  padding: 29px 25px;
   margin: -30px 0 0 -30px;
   h3 {
     font-size: 18px;
@@ -270,15 +272,17 @@ h3 {
     font-size: 14px;
     font-weight: 500;
     line-height: 140%;
-    margin: 0 0 1px;
+    margin: 11px 0 0;
   }
   p {
     font-size: 14px;
-    line-height: 140%;
-    margin: 0 0 12px;
+    line-height: 20px;
+    margin: 2px 0 0;
     color: #D8D8D9;
   }
   button {
+    position: absolute;
+    bottom: 33px;
     background: #F9FBFD; 
     border: none;
     font-size: 14px;
@@ -286,49 +290,119 @@ h3 {
     line-height: 150%;
     width: 210px;
     height: 40px;
-    margin-top: 15px;
     padding: 0;
   }
 }
 
+.cruise__route {
+  max-height: 41px;
+  overflow: auto;
+}
+
 .cruise__item-static_astoria {
+  background-color: rgb(75, 112, 156);
   background-image: url(../img/cruise-astoria_bg.jpg);
+  background-position: -166px 0;
+  @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
+    background-color: rgb(75, 112, 156);
+    background-image: url(../img/cruise-astoria_bg_2x.jpg);
+    background-position: -166px 0;  
+  }
 }
 
 .cruise__item-static_elain {
+  background-color: rgb(187, 211, 235);
   background-image: url(../img/cruise-elain_bg.jpg);
+  @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
+    background-color: rgb(187, 211, 235);
+    background-image: url(../img/cruise-elain_bg_2x.jpg);  
+  }
 }
 
 .cruise__item-static_atlantis {
+  background-color: rgb(187, 211, 235);
   background-image: url(../img/cruise-atlantis_bg.jpg);
+  @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
+    background-color: rgb(187, 211, 235);
+    background-image: url(../img/cruise-atlantis_bg_2x.jpg);  
+  }
+  background-position: -127px 0;
 }
 
 .cruise__item-static_odissey {
+  background-color: rgb(116, 142, 176);
   background-image: url(../img/cruise-odissey_bg.jpg);
+  background-position: -119px 0;
+  background-size: auto 419px;
+  @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
+    background-color: rgb(116, 142, 176);
+    background-image: url(../img/cruise-odissey_bg_2x.jpg);
+    background-position: -119px 0;
+    background-size: auto 419px;  
+  }
 }
 
 .cruise__item-static_olympia {
+  background-color: rgb(172, 198, 223);
   background-image: url(../img/cruise-olympia_bg.jpg);
+  background-position: -119px 0;
+  background-size: auto 419px;
+  @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
+    background-color: rgb(172, 198, 223);
+    background-image: url(../img/cruise-olympia_bg_2x.jpg);
+    background-position: -119px 0;
+    background-size: auto 419px;  
+  }
 }
 
 .cruise__item-static_aurora {
+  background-color: rgb(33, 59, 91);
   background-image: url(../img/cruise-aurora_bg.jpg);
+  background-position: -106px 0;
+  @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
+    background-color: rgb(33, 59, 91);
+    background-image: url(../img/cruise-aurora_bg_2x.jpg);
+    background-position: -106px 0  
+  }
 }
 
 .cruise__item-static_leonor {
+  background-color: rgb(213, 225, 241);
   background-image: url(../img/cruise-leonor_bg.jpg);
+  background-position: -147px 0;
+  @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
+    background-color: rgb(213, 225, 241);
+    background-image: url(../img/cruise-leonor_bg_2x.jpg);
+    background-position: -147px 0;  
+  }
 }
 
 .cruise__item-static_minion-1 {
+  background-color: rgb(183, 206, 232);
   background-image: url(../img/cruise-minion-1_bg.jpg);
+  background-position: -178px 0;
+  background-size: auto 523px;
+  @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
+    background-color: rgb(183, 206, 232);
+    background-image: url(../img/cruise-minion-1_bg_2x.jpg);
+    background-position: -178px 0;
+    background-size: auto 523px;  
+  }
 }
 
 //Order-form
 
 .order-form {
+  background-color: rgb(202, 222, 238);
   background: url(../img/order-form_bg.jpg);
   background-size: 100%;
-  background-position: center;
+  background-position: center -18px;
+  @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
+    background-color: rgb(202, 222, 238);
+    background: url(../img/order-form_bg_2x.jpg);
+    background-size: 100%;
+    background-position: center -18px;  
+  }
 }
 
 .order-form-wrapper {
@@ -343,18 +417,20 @@ h3 {
 .order-form h2 {
   font-weight: 700;
   font-size: 40px;
-  margin-bottom: 15px;
+  margin: 13px 0 0;
 }
 
 .order-form__text p {
   width: 355px;
   font-size: 18px;
   line-height: 150%;
+  margin: 15px 0 0;
 }
 
 .order-form__form {
   width: 304px;
-  padding: 49px;
+  margin: 2px 0 0;
+  padding: 44px 50px 50px;
   background: #011C40;
   fieldset { 
     border: none; 
@@ -366,7 +442,7 @@ h3 {
     font-size: 18px;
     font-weight: 500;
     line-height: 150%;
-    margin-bottom: 24px;
+    margin-bottom: 27px;
   }
   button { 
     background: #F9FBFD; 
@@ -383,7 +459,6 @@ h3 {
     border: none;
     color: #011C40;
     font-size: 14px;
-    line-height: 150%;
     &::placeholder {
       color: #011C40;
       font-size: 14px;
@@ -434,22 +509,25 @@ h3 {
 .contacts__map {
   width: 560px;
   height: 306px;
+  filter: saturate(0.5);
 }
 
 .contacts__text {
   width: 500px;
+  padding: 75px 0 0;
 }
 
 .contacts__call-to-action {
   font-size: 18px;
   font-weight: 500;
   line-height: 150%;
-  margin: 15px 0 33px;
+  margin: 0;
 }
 
 .contacts__address {
   line-height: 150%;
   display: flex;
+  margin: 32px 0 0;
   &::before {
     content: "";
     display: flex;
@@ -463,7 +541,7 @@ h3 {
 }
 
 .contacts__tel {
-  line-height: 150%;
+  margin: 24px 0 0;
   display: flex;
   &::before {
     content: "";
@@ -477,11 +555,6 @@ h3 {
   }
 }
 
-.contacts__tel {
-  line-height: 150%;
-}
-
-
 //footer
 
 .footer {
@@ -493,15 +566,17 @@ h3 {
 }
 
 .menu-list_footer {
-  margin-left: -300px;
+  margin-left: -298px;
 }
 
 .menu-list_social {
   align-items: center;
+  padding-top: 0;
 }
 
 .menu-list__link_social {
   padding-bottom: 0;
+  border: 0;
   &:hover { border-bottom: none; }
   &:active { border-bottom: none; }
 }
