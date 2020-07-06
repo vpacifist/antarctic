@@ -34,8 +34,13 @@ h3 {
   align-items: center;
 }
 
+.justify-content-flex-start {
+  justify-content: flex-start;
+}
+
 button:hover {
   cursor: pointer;
+  box-shadow: 0 0 10px #bbb;
 }
 
 //header and headig
@@ -64,6 +69,7 @@ button:hover {
 
 .menu-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   max-width: 1000px;
   padding-top: 9px;
@@ -191,15 +197,15 @@ button:hover {
 }
 
 .feature__item_boat {
- &::before {
-   content:"";
-   background-image: url(../img/icon_boat.svg);
-   background-size: 42px 15px;
-   background-repeat: no-repeat;
-   background-position: 0 8px;
-   width: 42px;
-   height: 23px;
-   position: absolute;
+  &::before {
+    content:"";
+    background-image: url(../img/icon_boat.svg);
+    background-size: 42px 15px;
+    background-repeat: no-repeat;
+    background-position: 0 8px;
+    width: 42px;
+    height: 23px;
+    position: absolute;
  }
 }
 
@@ -227,7 +233,10 @@ button:hover {
   width: 200px;
   height: 326px;
   padding: 30px;
-  margin-bottom: 30px;
+  margin: 0 30px 30px 0;
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
   position: relative;
   color: #F9FBFD;
   background-size: cover;
@@ -257,11 +266,12 @@ button:hover {
   visibility: hidden;
   position: relative;
   width: 210px;
-  height: 326px;
+  height: 327px;
   background: #011C40;
   color: #F9FBFD;
   padding: 29px 25px;
   margin: -30px 0 0 -30px;
+  overflow: auto;
   h3 {
     font-size: 18px;
     line-height: 150%;
@@ -282,21 +292,26 @@ button:hover {
   }
   button {
     position: absolute;
-    bottom: 33px;
+    top: 311px;
     background: #F9FBFD; 
     border: none;
     font-size: 14px;
     font-weight: 600;
     line-height: 150%;
     width: 210px;
-    height: 40px;
-    padding: 0;
+    padding: 10px;
   }
+}
+
+.cruise__item-inner {
+  height: 265px;
+  overflow: auto;
 }
 
 .cruise__route {
   max-height: 41px;
   overflow: auto;
+  scrollbar-color: #bbb #F9FBFD;
 }
 
 .cruise__item-static_astoria {
@@ -442,7 +457,7 @@ button:hover {
     font-size: 18px;
     font-weight: 500;
     line-height: 150%;
-    margin-bottom: 27px;
+    margin-bottom: 28px;
   }
   button { 
     background: #F9FBFD; 
@@ -452,7 +467,7 @@ button:hover {
     font-weight: 600;
     line-height: 150%;
     width: 303px;
-    height: 43px;
+    padding: 11px 10px;
   }
   input { 
     background: #F9FBFD; 
@@ -469,9 +484,9 @@ button:hover {
 
 .order-form__input-full {
   width: 271px;
-  height: 11px;
   margin-bottom: 20px;
-  padding: 16px;
+  padding: 11px 16px;
+  line-height: 150%;
 }
 
 .order-form__label-check { 
@@ -481,11 +496,16 @@ button:hover {
   font-size: 10px;
   line-height: 130%;
   margin-bottom: 30px;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
-.order-form__input-check {
+.order-form input[type="checkbox"] {
   opacity: 0;
-  margin-right: -12px;
+  margin-right: -18px;
+  width: 18px;
+  height: 18px;
   + span {
     width: 18px;
     height: 18px;
@@ -497,6 +517,13 @@ button:hover {
     background-repeat: no-repeat;
     background-position: center center;
   }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.order-form__label-span {
+  width: 280px;
 }
 
 
@@ -555,6 +582,14 @@ button:hover {
   }
 }
 
+.contacts__tel-link {
+  text-decoration: none;
+  color: #011c40;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 //footer
 
 .footer {
@@ -565,13 +600,20 @@ button:hover {
   padding: 50px 0;
 }
 
+.menu__inner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .menu-list_footer {
-  margin-left: -298px;
+  padding: 8px 6px 0;
+  max-width: 900px;
 }
 
 .menu-list_social {
   align-items: center;
-  padding-top: 0;
+  padding: 0;
 }
 
 .menu-list__link_social {
